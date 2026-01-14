@@ -1,10 +1,18 @@
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.5.3
+fastapi==0.110.0
+uvicorn[standard]==0.27.1
+
+# Pydantic (Rust wheel compatible)
+pydantic==2.6.1
+pydantic-core==2.16.2
+
 python-dotenv==1.0.0
+
+# Chroma + embeddings (stable combo)
 chromadb==0.4.22
-sentence-transformers==2.3.1
+sentence-transformers==2.2.2
+
 httpx==0.26.0
 python-multipart==0.0.6
-numpy<2.0
+
+numpy==1.26.4
 groq==0.4.2
