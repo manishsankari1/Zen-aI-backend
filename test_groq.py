@@ -16,7 +16,9 @@ import asyncio
 
 async def test_groq():
     print("🧪 Testing Groq API Integration...")
-    print(f"API Key: {os.getenv('GROQ_API_KEY')[:20]}...")
+    api_key = os.getenv('GROQ_API_KEY', '')
+    masked_key = f"{api_key[:10]}{'*' * 20}..." if api_key else "NOT SET"
+    print(f"API Key: {masked_key}")
     print(f"Model: {os.getenv('GROQ_MODEL')}")
     print()
     
